@@ -4,13 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ListaController {
+public class HomeController {
 	
-	private final String router = "NovoTitulo";
+	private String home = "Home";
 	
-	@RequestMapping("/lista/novo")
-	public String novo() {
-		return router;
+	@RequestMapping("/")
+	public String home() {
+		return this.home;
 	}
 
 }
