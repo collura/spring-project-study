@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import models.Titulo;
 import repository.Titulos;
@@ -27,8 +28,9 @@ public class ListaController {
 	
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String salvar(Titulo titulo) {
-		titulos.save(titulo);
-		return "Cadastro Título";		
+	public ModelAndView salvar() {
+		ModelAndView mv = new ModelAndView(router);
+		mv.addObject("message", "ok");
+		return mv;		
 	}
 }
