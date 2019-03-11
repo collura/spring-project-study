@@ -12,5 +12,10 @@ public class HomeController {
 	public String home() {
 		return this.home;
 	}
+	
+	@RequestMapping("/lista/novo")
+	public String cadastro() {
+		return "CadastrarTitulo";
+	}
 
 }
